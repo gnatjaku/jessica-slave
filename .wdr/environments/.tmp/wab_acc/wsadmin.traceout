@@ -1,0 +1,28 @@
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-696.1.1.el6.x86_64
+Java version = 1.8.0, Java Runtime Version = pxa6480sr4fp5-20170421_01 (SR4 FP5), Java Compiler = j9jit28, Java VM name = IBM J9 VM
+was.install.root = /data/was855client
+user.install.root = /data/was855client
+Java Home = /data/was855client/java/jre
+Classpath = /data/was855client/optionalLibraries/jython/jython.jar:/data/was855client/runtimes/com.ibm.ws.admin.client_8.5.0.jar:/data/was855client/plugins/com.ibm.ws.security.crypto.jar
+Java Library path = /data/was855client/java/jre/lib/amd64/compressedrefs:/data/was855client/java/jre/lib/amd64:/usr/lib64:/usr/lib
+Orb Version = IBM Java ORB build orb80-20170411.00
+Current trace specification = *=info
+************* End Display Current Environment *************
+[7/2/18 18:01:09:759 CEST] 00000001 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[7/2/18 18:01:10:371 CEST] 00000001 AbstractShell A   WASX7326I: Loaded properties file "/var/lib/jenkins/.wdr/environments/wab_prd/wsadmin.properties"
+[7/2/18 18:01:10:819 CEST] 00000001 SSLConfigMana I   CWPKI0051I: The process has the java security property jdk.certpath.disabledAlgorithms set to [MD2, MD5, RSA keySize < 1024, DSA keySize < 1024, EC keySize < 224].  The WebSphere Application server is setting the java security property jdk.certpath.disabledAlgorithms to [MD2, RSA keySize < 1024, MD5]. 
+[7/2/18 18:01:10:822 CEST] 00000001 SSLConfigMana I   CWPKI0051I: The process has the java security property jdk.tls.disabledAlgorithms set to [SSLv3, RC4, MD5withRSA, DH keySize < 768, 3DES_EDE_CBC, DESede, EC keySize < 224].  The WebSphere Application server is setting the java security property jdk.tls.disabledAlgorithms to [SSLv3, RC4, DH keySize < 768, MD5withRSA]. 
+[7/2/18 18:01:10:840 CEST] 00000001 SecurityObjec I   CWSCF0002I: The client code is attempting to load the security configuration the server and this operation is not allowed.
+[7/2/18 18:01:14:945 CEST] 00000001 SecurityObjec I   CWSCF0002I: The client code is attempting to load the security configuration the server and this operation is not allowed.
+[7/2/18 18:01:15:108 CEST] 00000001 AbstractShell A   WASX7093I: Issuing message: "WASX7318E: Received exception while declaring AdminControl; exception information: com.ibm.ws.scripting.ScriptingException: WASX7197E: Error creating validation output file .tmp/wab_prd/wsadmin.valout; exception information: java.io.IOException: No such file or directory"
+[7/2/18 18:01:15:109 CEST] 00000001 AbstractShell E   WASX7120E: Diagnostic information from exception with text "com.ibm.ws.scripting.ScriptingException: WASX7197E: Error creating validation output file .tmp/wab_prd/wsadmin.valout; exception information: java.io.IOException: No such file or directory
+" follows:
+
+ com.ibm.ws.scripting.ScriptingException: WASX7197E: Error creating validation output file .tmp/wab_prd/wsadmin.valout; exception information: java.io.IOException: No such file or directory
+	at com.ibm.ws.scripting.AbstractShell.setAndThrowScriptingException(AbstractShell.java:1879)
+	at com.ibm.ws.scripting.AdminConfigClient.<init>(AdminConfigClient.java:450)
+	at com.ibm.ws.scripting.WasxShell.declareBeans(WasxShell.java:573)
+	at com.ibm.ws.scripting.AbstractShell.run(AbstractShell.java:2246)
+	at com.ibm.ws.scripting.WasxShell.main(WasxShell.java:1172)
+
