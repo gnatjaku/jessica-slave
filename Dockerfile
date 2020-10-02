@@ -35,9 +35,15 @@ RUN /opt/IBM/InstallationManager/eclipse/tools/imcl install \
 
 RUN update-alternatives --install /bin/sh sh /bin/bash 100
 RUN apt-get install -y git
+RUN apt-get update
+RUN apt-get install -y python-pip
+RUN pip install requests
 ADD jython21.class /opt/IBM/WebSphere/AppClient85/optionalLibraries/jython21.class
+ADD jython27.tar.gz /opt/IBM/WebSphere/AppClient85/optionalLibraries/
+ADD jython.tar.gz /opt/IBM/WebSphere/AppClient85/optionalLibraries/
 RUN usermod -d /var/jenkins_home ${user} && chmod -R 777 /tmp 
 
 USER ${user}
+ENV HOME /var/jenkins_home
 
 ENTRYPOINT ["jenkins-agent"]
